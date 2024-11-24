@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="MAIN" Id="{737732c9-b951-4d17-ada8-8825fad5bd15}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	fb_array:FB_Array;
+	fb_check:FB_Check;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fb_array();
+fb_check();
+// Setting value to iPageNumber when button is pressed
+IF HMI.xButton1 THEN
+	HMI.iPageNumber:=1;
+	HMI.xButton1:=FALSE;
+ELSIF HMI.xButton2 THEN
+	HMI.iPageNumber:=2;
+	HMI.xButton2:=FALSE;
+ELSIF HMI.xButton3 THEN
+	HMI.iPageNumber:=3;
+	HMI.xButton3:=FALSE;
+ELSIF HMI.xButton4 THEN
+	HMI.iPageNumber:=4;
+	HMI.xButton4:=FALSE;
+ELSIF HMI.xButton5 THEN
+	HMI.iPageNumber:=5;
+	HMI.xButton5:=FALSE;
+ELSIF HMI.xButton6 THEN
+	HMI.iPageNumber:=6;	
+	HMI.xButton6:=FALSE;					
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="8" Count="1" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="10" Count="17" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

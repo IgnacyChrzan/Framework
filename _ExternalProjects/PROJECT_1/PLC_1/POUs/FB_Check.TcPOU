@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="FB_Check" Id="{d1ae89a7-59a6-47e7-974b-930426d17021}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Check
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	axTest: ARRAY[0..19] OF BOOL;    // Array of 20 Bool type elements
+	iCell: INT;						 
+	x:BOOL:=TRUE;
+	iNumberOfCellWithTrueValue:INT;					// Number of cell where bool value is true
+	xEndingLoop: BOOL:=FALSE;				// Variable ending loop when there is true value in array
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Method 
+CheckIfAnyArrayElementsTrue();
+// Setting values to array
+IF 	NOT xEndingLoop THEN
+	FOR iCell:= 0 TO 19 DO	
+		// True value in 7th cell
+		IF iCell = 7  THEN
+			axTest[iCell]:=TRUE;
+			xEndingLoop:=TRUE;
+		ELSE
+			axTest[iCell]:=FALSE;
+		
+		END_IF
+	END_FOR
+	xEndingLoop:=TRUE;
+ELSE
+	;
+END_IF
+	
+]]></ST>
+    </Implementation>
+    <Method Name="CheckIfAnyArrayElementsTrue" Id="{4438729a-5e91-4fcb-a91a-b438d3b4f5de}">
+      <Declaration><![CDATA[METHOD CheckIfAnyArrayElementsTrue : BOOL
+VAR_INPUT
+END_VAR
+VAR_INST
+	xInArrayExistsTrueValue:BOOL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[// Loop ending when xCell = TRUE
+IF x:=TRUE THEN
+	FOR iCell:= 0 TO 19  DO
+		// Searching TRUE value in array
+		IF axTest[iCell]= TRUE THEN
+			iNumberOfCellWithTrueValue:=iCell;
+			x:=FALSE;
+			xInArrayExistsTrueValue:=TRUE;
+			EXIT;
+		END_IF
+	END_FOR
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_Check">
+      <LineId Id="55" Count="0" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="82" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="50" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="69" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="46" Count="0" />
+      <LineId Id="49" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="28" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Check.CheckIfAnyArrayElementsTrue">
+      <LineId Id="20" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="6" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="10" Count="0" />
+      <LineId Id="7" Count="0" />
+      <LineId Id="12" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
