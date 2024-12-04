@@ -86,6 +86,10 @@
   },
   "packages": [
     {
+      "name": "FrameworkPrj1",
+      "basePath": "/FrameworkPrj1"
+    },
+    {
       "name": "Beckhoff.TwinCAT.HMI.Controls",
       "basePath": "/Beckhoff.TwinCAT.HMI.Controls"
     },

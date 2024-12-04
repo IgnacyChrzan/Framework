@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
-  <POU Name="MAIN" Id="{352c01da-1586-42c5-b1d3-30a80a0c5354}" SpecialFunc="None">
+  <POU Name="MAIN" Id="{6996ef45-bc9e-41e9-a875-f7be1d622c00}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
-	Sensor : FB_DigitalSensor; // Cyfrowy sensor, obiekt funkcji blokowej
-    Simulate : BOOL;           // Włącza tryb symulacji w czujniku
-    Activte : BOOL;            // Zmienna do odczytania aktywnego stanu sensora
-    t1, t2 : TIME;             // Czas aktywności i nieaktywności sensora
-    Traced : BOOL;             // Flaga do zarządzania komunikatami Trace
-    inData : BOOL;             // Dane wejściowe dla trybu symulacji
+Sensor :FB_DigitalSensor;
+Simulate :BOOL;
+Activte :BOOL;
+t1,t2 :TIME;
+Traced :BOOL;
+inData :BOOL;
+
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -37,8 +38,8 @@ ELSE
 END_IF]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
-      <LineId Id="12" Count="21" />
-      <LineId Id="2" Count="0" />
+      <LineId Id="32" Count="21" />
+      <LineId Id="5" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

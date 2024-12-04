@@ -3,20 +3,19 @@
   <PropertyGroup>
     <FileVersion>1.0.0.0</FileVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{56e39585-814d-400e-b1a9-ca2bb311863e}</ProjectGuid>
+    <ProjectGuid>{6c5f8eef-3517-4685-8506-90b5476c7a97}</ProjectGuid>
     <SubObjectsSortedByName>True</SubObjectsSortedByName>
-    <DownloadApplicationInfo>false</DownloadApplicationInfo>
+    <DownloadApplicationInfo>true</DownloadApplicationInfo>
     <WriteProductVersion>true</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
     <Name>PLC_1</Name>
     <ProgramVersion>3.1.4024.0</ProgramVersion>
-    <Application>{04d2a6d2-e36f-436d-83f9-a1a32727107c}</Application>
-    <TypeSystem>{c494d8e9-d096-4543-86b0-07c3166e4f74}</TypeSystem>
-    <Implicit_Task_Info>{bf16d8fc-5da4-4057-90ad-c6c458139408}</Implicit_Task_Info>
-    <Implicit_KindOfTask>{4458aa3c-0ebf-455b-9d61-a271c8e6836b}</Implicit_KindOfTask>
-    <Implicit_Jitter_Distribution>{b59cff92-e6a8-45f2-a075-854dd86b5d70}</Implicit_Jitter_Distribution>
-    <LibraryReferences>{1f30e3b6-2fcb-49c7-bc6b-0dfdcb02d684}</LibraryReferences>
-    <Released>false</Released>
+    <Application>{7ea78a51-1d72-45ca-b787-a1048831472a}</Application>
+    <TypeSystem>{8c8c6690-57ae-45e6-9c50-4087bc0dd5a7}</TypeSystem>
+    <Implicit_Task_Info>{5dea4fcf-46f5-4f58-bfb0-13a807cbc072}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{8ccf4b11-d6fe-44e7-8d43-b4d9ab2dc2e1}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{275dcba2-078c-4727-8ad1-b66af371adfd}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{93fbd090-06a5-48ae-ada9-bc93e8a74f8c}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="PlcTask.TcTTO">
@@ -35,7 +34,6 @@
   <ItemGroup>
     <PlaceholderReference Include="SPT Base Types">
       <DefaultResolution>SPT Base Types, * (Beckhoff Automation LLC)</DefaultResolution>
-      <Namespace>SPT_BaseTypes</Namespace>
       <Parameters>
         <Parameter ListName="PARAMETERS_BASECOMPONENT" xmlns="">
           <Key>COMPONENT_BASE_ALARM_COUNT</Key>
@@ -103,16 +101,6 @@
         </Parameter>
       </Parameters>
     </PlaceholderReference>
-    <PlaceholderReference Include="SPT Component Base">
-      <DefaultResolution>SPT Component Base, * (Beckhoff Automation LLC)</DefaultResolution>
-      <Parameters>
-        <Parameter ListName="PARAMETERS_BASECOMPONENT" xmlns="">
-          <Key>COMPONENT_BASE_ALARM_COUNT</Key>
-          <Value>2</Value>
-        </Parameter>
-      </Parameters>
-      <Namespace>SPT_ComponentBase</Namespace>
-    </PlaceholderReference>
     <PlaceholderReference Include="SPT Components">
       <DefaultResolution>SPT Components, * (Beckhoff Automation LLC)</DefaultResolution>
       <Namespace>SPT_Components</Namespace>
@@ -132,32 +120,6 @@
         <Parameter ListName="PARAMETERS_CYLINDER" xmlns="">
           <Key>MAX_NUMBER_OF_SOLENOIDS</Key>
           <Value>32</Value>
-        </Parameter>
-      </Parameters>
-    </PlaceholderReference>
-    <PlaceholderReference Include="SPT PackML Base">
-      <DefaultResolution>SPT PackML Base, * (Beckhoff Automation LLC)</DefaultResolution>
-      <Namespace>SPT_PackMLBase</Namespace>
-      <Parameters>
-        <Parameter ListName="PARAMETERS_PACKML_BASE" xmlns="">
-          <Key>MAX_NO_OF_SUBMODULES</Key>
-          <Value>20</Value>
-        </Parameter>
-        <Parameter ListName="PARAMETERS_PACKML_BASE" xmlns="">
-          <Key>MAX_NO_OF_COMPONENTS</Key>
-          <Value>32</Value>
-        </Parameter>
-        <Parameter ListName="PARAMETERS_PACKML_BASE" xmlns="">
-          <Key>MAX_NO_OF_EXTERNAL_CONTROLLERS</Key>
-          <Value>10</Value>
-        </Parameter>
-        <Parameter ListName="PARAMETERS_PACKML_BASE" xmlns="">
-          <Key>UNIT_MODE_DEFAULT</Key>
-          <Value>E_PMLUnitMode.ePMLUnitMode_Production</Value>
-        </Parameter>
-        <Parameter ListName="PARAMETERS_PACKML_BASE" xmlns="">
-          <Key>UNIT_STATE_DEFAULT</Key>
-          <Value>E_PMLCommand.ePMLCommand_Abort</Value>
         </Parameter>
       </Parameters>
     </PlaceholderReference>
@@ -197,6 +159,7 @@
     </PlaceholderReference>
     <PlaceholderReference Include="Tc3_JsonXml">
       <DefaultResolution>Tc3_JsonXml, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_JsonXml</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="Tc3_Module">
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
@@ -211,19 +174,19 @@
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
-        <Data>
-          <o xml:space="preserve" t="OptionKey">
+  <Data>
+    <o xml:space="preserve" t="OptionKey">
       <v n="Name">"&lt;ProjectRoot&gt;"</v>
       <d n="SubKeys" t="Hashtable" />
       <d n="Values" t="Hashtable" />
     </o>
-        </Data>
-        <TypeList>
-          <Type n="Hashtable">System.Collections.Hashtable</Type>
-          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
-          <Type n="String">System.String</Type>
-        </TypeList>
-      </XmlArchive>
+  </Data>
+  <TypeList>
+    <Type n="Hashtable">System.Collections.Hashtable</Type>
+    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+    <Type n="String">System.String</Type>
+  </TypeList>
+</XmlArchive>
     </PlcProjectOptions>
   </ProjectExtensions>
 </Project>
