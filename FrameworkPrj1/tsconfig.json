@@ -12,16 +12,14 @@
     "noEmitOnError": true,
     "noImplicitAny": false,
     "noImplicitThis": true,
+    "strictBindCallApply": true,
     "strictNullChecks": true,
     "noImplicitReturns": true,
     "strictFunctionTypes": false,
     "strictPropertyInitialization": false,
     "alwaysStrict": false
   },
-  "exclude": [
-    "bin/"
-  ],
   "include": [
-    "Beckhoff.TwinCAT.HMI.Framework.InstallPath/TcHmi.d.ts"
+    "../Packages/Beckhoff.TwinCAT.HMI.Framework.12.762.44/runtimes/native1.12-tchmi/TcHmi.d.ts"
   ]
 }
