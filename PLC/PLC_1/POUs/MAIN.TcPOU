@@ -38,7 +38,7 @@ ELSE
 END_IF]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
-      <LineId Id="32" Count="21" />
+      <LineId Id="64" Count="21" />
       <LineId Id="5" Count="0" />
     </LineIds>
   </POU>

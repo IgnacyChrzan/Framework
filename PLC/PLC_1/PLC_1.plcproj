@@ -16,6 +16,7 @@
     <Implicit_KindOfTask>{8ccf4b11-d6fe-44e7-8d43-b4d9ab2dc2e1}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{275dcba2-078c-4727-8ad1-b66af371adfd}</Implicit_Jitter_Distribution>
     <LibraryReferences>{93fbd090-06a5-48ae-ada9-bc93e8a74f8c}</LibraryReferences>
+    <Released>false</Released>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="PlcTask.TcTTO">
@@ -100,6 +101,7 @@
           <Value>FALSE</Value>
         </Parameter>
       </Parameters>
+      <Namespace>SPT_BaseTypes</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="SPT Components">
       <DefaultResolution>SPT Components, * (Beckhoff Automation LLC)</DefaultResolution>
@@ -157,6 +159,9 @@
         </Parameter>
       </Parameters>
     </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_IPCDiag">
+      <DefaultResolution>Tc3_IPCDiag, * (Beckhoff Automation GmbH)</DefaultResolution>
+    </PlaceholderReference>
     <PlaceholderReference Include="Tc3_JsonXml">
       <DefaultResolution>Tc3_JsonXml, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc3_JsonXml</Namespace>
@@ -174,19 +179,19 @@
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
-  <Data>
-    <o xml:space="preserve" t="OptionKey">
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
       <v n="Name">"&lt;ProjectRoot&gt;"</v>
       <d n="SubKeys" t="Hashtable" />
       <d n="Values" t="Hashtable" />
     </o>
-  </Data>
-  <TypeList>
-    <Type n="Hashtable">System.Collections.Hashtable</Type>
-    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
-    <Type n="String">System.String</Type>
-  </TypeList>
-</XmlArchive>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
     </PlcProjectOptions>
   </ProjectExtensions>
 </Project>
